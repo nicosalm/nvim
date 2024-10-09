@@ -14,7 +14,7 @@ return {
         name = "plenary"
 	},
 
-    -- "github/copilot.vim",
+    "github/copilot.vim",
 	"wakatime/vim-wakatime",
 	"andweeb/presence.nvim",
     "tpope/vim-commentary",
