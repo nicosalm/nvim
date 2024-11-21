@@ -28,7 +28,7 @@ return {
             end)
 
             vim.keymap.set("n", "<leader>tf", function()
-                neotest.run.run(vim.fn.expand("%"))
+                neotest.run.run(vim.fn.expand("%")) -- run entire file 
             end)
         end,
     },

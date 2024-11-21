@@ -14,6 +14,7 @@ return {
         name = "plenary"
 	},
 
+    "mrjones2014/smart-splits.nvim",
     "github/copilot.vim",
 	"wakatime/vim-wakatime",
 	"andweeb/presence.nvim",
