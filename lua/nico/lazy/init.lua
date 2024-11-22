@@ -1,4 +1,3 @@
-
 return {
 
     {
@@ -12,12 +11,21 @@ return {
     {
         "nvim-lua/plenary.nvim",
         name = "plenary"
-	},
+    },
 
-    "mrjones2014/smart-splits.nvim",
-    "github/copilot.vim",
-	"wakatime/vim-wakatime",
-	"andweeb/presence.nvim",
+    "wakatime/vim-wakatime",
+    "andweeb/presence.nvim",
     "tpope/vim-commentary",
-    "alec-gibson/nvim-tetris",
+
+    {
+        "smjonas/inc-rename.nvim",
+        config = function()
+            require("inc_rename").setup()
+        end,
+    },
+
+    vim.keymap.set("n", "<leader>rn", function()
+        return ":IncRename " .. vim.fn.expand("<cword>")
+    end, { expr = true })
+
 }
