@@ -17,6 +17,15 @@ return {
     "andweeb/presence.nvim",
     "tpope/vim-commentary",
 
+
+    -- ys iw " (you surround)
+    -- cs " [  (change surround)
+    -- ds "    (delete surround)
+    -- yss "   (wrap sentence in ")
+    -- selection in visual mode + shift+S <p> wrap selection in p tag
+    -- left bracket has space, right does not
+    "tpope/vim-surround",
+
     {
         "smjonas/inc-rename.nvim",
         config = function()
