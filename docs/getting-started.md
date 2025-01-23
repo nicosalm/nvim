@@ -2,21 +2,47 @@
 
 So you want to customize Neovim? Let's dive in.
 
+# Getting Started with Neovim
+
+## Installation
+
+On macOS:
+```bash
+brew install neovim
+```
+
+On Ubuntu/Debian:
+```bash
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+sudo mv nvim.appimage /usr/local/bin/nvim
+```
+
+On Arch (btw):
+```bash
+pacman -S neovim
+```
+
+Create your config directory:
+```bash
+mkdir -p ~/.config/nvim
+```
+
 ## What's What
 
 Your Neovim config lives in a bunch of Lua files. Here's how I organize mine:
 
 ```
 .
-├── init.lua              # The starting point
+├── init.lua                # The starting point
 ├── lua
-│   └── user             # Your stuff goes here
-│       ├── lazy         # Plugin configs
-│       │   └── *.lua    # One file per plugin
-│       ├── init.lua     # Main config
-│       ├── lazy_init.lua# Plugin manager setup
-│       ├── remap.lua    # Keymaps
-│       └── set.lua      # Vim settings
+│   └── user                # Your stuff goes here
+│       ├── lazy            # Plugin configs
+│       │   └── *.lua       # One file per plugin
+│       ├── init.lua        # Main config
+│       ├── lazy_init.lua   # Plugin manager setup
+│       ├── remap.lua       # Keymaps
+│       └── set.lua         # Vim settings
 ```
 
 ## Bootstrap Your Config
