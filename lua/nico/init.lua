@@ -19,6 +19,20 @@ vim.filetype.add({
     }
 })
 
+-- vim diagnostic config
+vim.api.nvim_set_hl(0, "FloatBorder", {
+    fg = "#40ffff",
+    sp = "#40ffff",
+    ctermfg = "cyan",
+    bold = true,
+})
+
+vim.diagnostic.config({
+    float = {
+        border = "single",
+    }
+})
+
 autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',
