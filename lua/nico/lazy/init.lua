@@ -24,6 +24,13 @@ return {
             require("inc_rename").setup()
         end,
     },
+    {
+        'saecki/crates.nvim',
+        tag = 'stable',
+        config = function()
+            require('crates').setup()
+        end,
+    },
 
     vim.keymap.set("n", "<leader>rn", function()
         return ":IncRename " .. vim.fn.expand("<cword>")
