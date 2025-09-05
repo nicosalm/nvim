@@ -1,14 +1,21 @@
 return {
 
-    {
-        "nvim-lua/plenary.nvim",
-        name = "plenary"
-    },
-
-    "wakatime/vim-wakatime",
+    { "nvim-lua/plenary.nvim", name = "plenary" },
+    { 'wakatime/vim-wakatime', lazy = false },
     "andweeb/presence.nvim",
     "tpope/vim-commentary",
-
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            require 'colorizer'.setup {
+                'css';
+                'javascript';
+                html = {
+                    mode = 'foreground';
+                }
+            }
+        end,
+    },
 
     -- ys iw " (you surround)
     -- cs " [  (change surround)
